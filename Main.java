@@ -1,10 +1,20 @@
 public class Main {
-
+    public static boolean asalMi(int sayi){
+        for(int i=2 ; i<sayi ; i++){
+           if(sayi % i == 0) {
+               return false;
+           }
+        }
+        return true;
+    }
     public static void main(String[] args) {
-Calculator dortislem = new Calculator();
-System.out.println(dortislem.bol(10,2));
-        System.out.println(dortislem.carp(5,1));
-        System.out.println( dortislem.cikar(7,2));
-        System.out.println (dortislem.topla(3,2));
+int sayi;
+for(int i=2 ; i<1000 ; i++) {
+    if (asalMi(i) == true) {
+        System.out.println(i);
     }
 }
+
+
+        }
+    }
