@@ -1,22 +1,44 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int ebobBulma(int number1,int number2){
-        int ebob=1;
-        for(int i=2 ; i<=number1 && i<=number2 ; i++){
-            if(number1%i==0 && number2%i==00){
-                ebob = i;
-            }
-        }
-        return ebob;
-    }
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        int secim = 0;
+        do {
+            System.out.println("1- Elit üye ekleme");
+            System.out.println("2- Genel Üye ekleme");
+            System.out.println("3- Mail Gönderme");
+            System.out.println("0- Programdan çıkış");
+            System.out.print("Lütfen bir seçim yapın: ");
+            secim = scanner.nextInt();
 
-Scanner sayi = new Scanner(System.in);
-System.out.println("birinci sayı: ");
-int sayi1 = sayi.nextInt();
-System.out.println("ikinci sayı: ");
-int sayi2 = sayi.nextInt();
-System.out.println(ebobBulma(sayi1,sayi2));
+            UyeEkleme üyeEkleme = new UyeEkleme();
+
+            switch (secim) {
+                case 1:
+                    System.out.println("Lütfen elit üye ad bilgisini giriniz: ");
+                    String ad = scan.nextLine();
+                    System.out.println("Lütfen elit üye soyad bilgisini giriniz: ");
+                    String soyad = scan.nextLine();
+                    System.out.println("Lütfen elit üye mail bilgisini giriniz: ");
+                    String mail = scan.nextLine();
+                    break;
+                case 2:
+                    //Genel üye ekleme;
+                    break;
+                case 3:
+                    //mail gönderme;
+                    break;
+                case 0:
+                    System.out.println("Program sonlandırılıyor...");
+                    break;
+                default:
+                    System.out.println("Hatalı seçim yaptınız. Lütfen tekrar deneyin.");
+            }
+        } while (secim != 0);
+        scanner.close();
+
     }
 }
+
